@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapremina valjka</title>
+</head>
+<body>
+    <label for="poluprecnik">Unesite poluprecnik valjka:</label><br>
+    <input type="text" id="poluprecnik"/><br>
+    <label for="visina">Unesite visinu valjka:</label><br>
+    <input type="text" id="visina"/><br>
+    <label for="rezultat">REZULTAT:</label><br>
+    <input type="text" id="rezultat"/><br>
+    <input type="button" value="Izracunaj" onclick="ZapreminaValjka()"/>
+
+<script>
+//V = r2 * π * H
+    function ZapreminaValjka()
+    {
+         let r= Number(document.querySelector("#poluprecnik").value);
+         let H= Number(document.querySelector("#visina").value);
+         let rezultat;
+         rezultat=r*r*Math.PI*H;
+         document.getElementById("rezultat").value = rezultat;
+    }
+</script>
+</body>
+</html>
